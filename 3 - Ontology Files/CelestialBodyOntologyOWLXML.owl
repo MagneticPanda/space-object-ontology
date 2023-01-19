@@ -1,0 +1,4114 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/CelestialBodyOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/CelestialBodyOntology"
+     versionIRI="http://www.semanticweb.org/CelestialBodyOntology/1.0.0">
+    <Prefix name="" IRI="http://www.semanticweb.org/CelestialBodyOntology"/>
+    <Prefix name="cbo" IRI="http://www.semanticweb.org/CelestialBodyOntology#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Knowledge model for the classification and characteristic identification of various celestial body types.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Note: Since descripion logic logic cannot capture protege datat properties, the &apos;Intagible Property&apos; subclasses can be seen as convenice classes which were used for the modelling of DL statements.
+
+However, it protege their functionality is fulfilled by the data properties.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Note: The focus has been placed on modelling Earth to it&apos;s full extent as it is the primary celestial body upon which the competency questions are based.
+
+It would be infeasible to model every single celestial body instance with the same level of granuality as we did for Earth.
+
+However, all the data populated in this ontology can fully answer all of the competency questions.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#ArtificialSatellite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Asteroid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AsteroidCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Atmosphere"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AtmosphereElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AtmosphereLayer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AtmospherePressure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AvgWaterPH"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BlackHole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BlackHoleCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CelestialBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CelestialBodyCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Characteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassAStar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassBStar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassFStar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassGStar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassKStar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassMStar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassOStar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClimateRegion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Colour"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Comet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CometCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Core"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CoreMaterial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DayLength"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Density"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EventHorizon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FormationEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FullLunarEclipse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GaseousPlanet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GeothermalStorm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gravity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GravityStrength"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HabitableZone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IntangibleAsteroidProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IntangibleBlackHoleProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IntangibleCelestialBodyProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IntangibleCometProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IntangiblePlanetProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IntangibleProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IntangibleSatelliteProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IntangibleStarProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IntermediateBlackHole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lifespan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LostComet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MagneticField"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MagneticFieldStrength"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeteorShower"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MinitatureBlackHole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NaturalEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NaturalSatellite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonPeriodicComet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OrbitalPeriod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PartialLunarEclipse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Particle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PeriodicComet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Planet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlanetCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProducibleElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RadiationLevel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RadiationType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Radius"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ring"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RingMaterial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RingWidth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RotationAngle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Satellite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SatelliteCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SignalTransmission"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SolarCycle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SolarFlare"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SolarNebula"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SolarStorm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Speed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Star"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StarCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StellarBlackHole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StellarWind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Storm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SungrazingComet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SupermassiveBlackHole"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Surface"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SurfaceLayer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SurfaceMaterial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SurfaceTemperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TangibleAsteroidProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TangibleBlackHoleProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TangibleCelestialBodyProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TangibleCometProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TangiblePlanetProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TangibleProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TangibleSatelliteProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TangibleStarProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Temperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TerrestrialPlanet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tornado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tsunami"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TypeCAsteroid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TypeMAsteroid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TypeSAsteroid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolcanicEruption"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WaterBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WindSpeed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#allowsFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#compriseOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#emits"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#experiences"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#feedsOff"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#filters"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#formedFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAsteroidCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBlackHoleCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCelesialBodyCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCelestialBodyCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasClimateRegion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCometCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIntangibleAsteroidProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIntangibleBlackHoleProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIntangibleCelestialBodyProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIntangibleCometProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIntangiblePlanetProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIntangibleSatelliteProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIntangibleStarProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStarCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTangibleAsteroidProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTangibleBlackHoleProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTangibleCelestialBodyProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTangibleCometProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTangiblePlanetProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTangibleSatelliteProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTangibleStarProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#orbits"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#produces"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#radiates"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAtmosphereLayer"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAtmospherePressure"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAvgWaterPH"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDayLength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDensity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasGravityStrength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasHabitableZone"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLifeSpan"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMagneticFieldStrength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMass"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasOrbitalPeriod"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPeriod"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRadiationLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRadius"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRingWidth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasRotationAngle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSolarCycle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSolarMass"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSpeed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasStellarTemperature"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSurfaceLayer"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSurfacePressure"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSurfaceTemperature"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTemperature"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasWindSpeed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Alpha_Centauri_B"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Altair_A7_V"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Amalthea"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Andesite"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Argon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ariel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Basalt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Betelgeuse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Blue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Calisto"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carbon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carbon_based"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Charged_Particle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Charon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Continental_Climate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Crop_Life_Sustaining"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cygnus_X-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Deimos"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dione"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Discovered"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Discovered_Life"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dry_Climate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dust"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dust_Particle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ELF"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Earth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Earth_Atmosphere"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Earth_Core"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Earth_Magnetic_Field"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Earth_Surface"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Earth_Water"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Enceladus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Energised_Particle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Eunomia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Europa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fieldbus_Transmission"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Four-Wire_Transmission"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Full_Lunar_Eclipse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GCIRS_13E"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gamma_Ray"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ganymede"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gaseous"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Geothermal_Storm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Green"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Has_Existing_Infrastructure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Helium"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Highlands_Climate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Human_Life_Sustaining"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hydrogen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hygiea"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hyperion"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Iapetus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ice"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Infrared"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Io"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Iron"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Jupiter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kepler"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kreutz"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lithium"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Man_Made"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mars"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mercury"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Metallic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Meteor_Shower"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Microwave"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mimas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Miranda"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Moon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Natural"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Neptune"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nereid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nickel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nitrogen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Oberon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Oblate_Spheroid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Olivine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Orange"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Oxygen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Partial_Lunar_Eclipse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pheobe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Phobos"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pink"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pluto"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Polar_Climate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Polaris"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Psyche"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Purple"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pyroxene"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Radio_Wave"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Red"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Regulus_and_Algol_A"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rhea"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rock"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rocky"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Safe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Saturn"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Saturn_Ring"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Self-Illuminating"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Siderophile"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Silica_Rock"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Silicon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Smart_Transmission"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Solar_Flare"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Solar_Nebula"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Solar_Storm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sphere"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stellar_Wind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stony"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Storm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Subtropical_Climate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sulphate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sulphur"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sun"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Terraformable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tethys"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Titan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Titania"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ton_618"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tornado"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Triaxial_Ellipsoid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Triton"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tropical_Climate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tsunami"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Two-Wire_Transmission"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Umbriel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Uranus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#VLF"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Venus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Visible_Light"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Visited"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Volcanic_Eruption"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#X-Ray"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Yellow"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Zeta_Orionis_Aa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Biela&apos;s_Comet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#C/1980_E1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Halley&apos;s_Comet"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#ArtificialSatellite"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Satellite"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+                <NamedIndividual IRI="#Man_Made"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ClassAStar"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Star"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasStellarTemperature"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">7400</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">10000</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ClassBStar"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Star"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasStellarTemperature"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">10000</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">25000</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ClassFStar"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Star"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasStellarTemperature"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">6000</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">7400</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ClassGStar"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Star"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasStellarTemperature"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">5000</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">6000</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ClassKStar"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Star"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasStellarTemperature"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">3500</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">5000</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ClassMStar"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Star"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasStellarTemperature"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">3500</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ClassOStar"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Star"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasStellarTemperature"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">25000</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">50000</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#GaseousPlanet"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Planet"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+                <NamedIndividual IRI="#Gaseous"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#IntermediateBlackHole"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#BlackHole"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSolarMass"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">100.0</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">10000.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LostComet"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Comet"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasPeriod"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">200</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1000</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MinitatureBlackHole"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#BlackHole"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSolarMass"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">10.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NaturalSatellite"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Satellite"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+                <NamedIndividual IRI="#Natural"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NonPeriodicComet"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Comet"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasPeriod"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1000</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PeriodicComet"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Comet"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasPeriod"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">20</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">200</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#StellarBlackHole"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#BlackHole"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSolarMass"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">10.0</Literal>
+                    </FacetRestriction>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">100.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SungrazingComet"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Comet"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasPeriod"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">20</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SupermassiveBlackHole"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#BlackHole"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#hasSolarMass"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:float"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">100000.0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TerrestrialPlanet"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Planet"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+                <NamedIndividual IRI="#Rocky"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TypeCAsteroid"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Asteroid"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasAsteroidCharacteristic"/>
+                <NamedIndividual IRI="#Carbon_based"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TypeMAsteroid"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Asteroid"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasAsteroidCharacteristic"/>
+                <NamedIndividual IRI="#Metallic"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TypeSAsteroid"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Asteroid"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasAsteroidCharacteristic"/>
+                <NamedIndividual IRI="#Stony"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#ArtificialSatellite"/>
+        <Class IRI="#Satellite"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Asteroid"/>
+        <Class IRI="#CelestialBody"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Asteroid"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasIntangibleAsteroidProperty"/>
+            <Class IRI="#IntangibleAsteroidProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Asteroid"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTangibleAsteroidProperty"/>
+            <Class IRI="#TangibleAsteroidProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Asteroid"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasAsteroidCharacteristic"/>
+            <Class IRI="#AsteroidCharacteristic"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AsteroidCharacteristic"/>
+        <Class IRI="#Characteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Atmosphere"/>
+        <Class IRI="#TangibleAsteroidProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Atmosphere"/>
+        <Class IRI="#TangiblePlanetProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Atmosphere"/>
+        <Class IRI="#TangibleSatelliteProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Atmosphere"/>
+        <Class IRI="#TangibleStarProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AtmosphereElement"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BlackHole"/>
+        <Class IRI="#CelestialBody"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BlackHole"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasIntangibleBlackHoleProperty"/>
+            <Class IRI="#IntangibleBlackHoleProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BlackHole"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTangibleBlackHoleProperty"/>
+            <Class IRI="#TangibleBlackHoleProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BlackHole"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasBlackHoleCharacteristic"/>
+            <Class IRI="#TangibleBlackHoleProperty"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BlackHoleCharacteristic"/>
+        <Class IRI="#Characteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CelestialBody"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasIntangibleCelestialBodyProperty"/>
+            <Class IRI="#IntangibleCelestialBodyProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CelestialBody"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTangibleCelestialBodyProperty"/>
+            <Class IRI="#TangibleCelestialBodyProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CelestialBody"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasCelesialBodyCharacteristic"/>
+            <Class IRI="#CelestialBodyCharacteristic"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CelestialBodyCharacteristic"/>
+        <Class IRI="#Characteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassAStar"/>
+        <Class IRI="#Star"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassBStar"/>
+        <Class IRI="#Star"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassFStar"/>
+        <Class IRI="#Star"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassGStar"/>
+        <Class IRI="#Star"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassKStar"/>
+        <Class IRI="#Star"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassMStar"/>
+        <Class IRI="#Star"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassOStar"/>
+        <Class IRI="#Star"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Colour"/>
+        <Class IRI="#TangibleCelestialBodyProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Comet"/>
+        <Class IRI="#CelestialBody"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Comet"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasIntangibleCometProperty"/>
+            <Class IRI="#IntangibleCometProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Comet"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTangibleCometProperty"/>
+            <Class IRI="#TangibleCometProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Comet"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasCometCharacteristic"/>
+            <Class IRI="#CometCharacteristic"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CometCharacteristic"/>
+        <Class IRI="#Characteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Core"/>
+        <Class IRI="#TangibleCometProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Core"/>
+        <Class IRI="#TangiblePlanetProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Core"/>
+        <Class IRI="#TangibleSatelliteProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Core"/>
+        <Class IRI="#TangibleStarProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DayLength"/>
+        <Class IRI="#IntangiblePlanetProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DayLength"/>
+        <Class IRI="#IntangibleSatelliteProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Density"/>
+        <Class IRI="#IntangibleCelestialBodyProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EventHorizon"/>
+        <Class IRI="#TangibleBlackHoleProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FormationEvent"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FullLunarEclipse"/>
+        <Class IRI="#NaturalEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GaseousPlanet"/>
+        <Class IRI="#Planet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeothermalStorm"/>
+        <Class IRI="#Storm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gravity"/>
+        <Class IRI="#IntangibleCelestialBodyProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HabitableZone"/>
+        <Class IRI="#IntangibleStarProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IntangibleAsteroidProperty"/>
+        <Class IRI="#IntangibleProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IntangibleBlackHoleProperty"/>
+        <Class IRI="#IntangibleProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IntangibleCelestialBodyProperty"/>
+        <Class IRI="#IntangibleProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IntangibleCometProperty"/>
+        <Class IRI="#IntangibleProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IntangiblePlanetProperty"/>
+        <Class IRI="#IntangibleProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IntangibleSatelliteProperty"/>
+        <Class IRI="#IntangibleProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IntangibleStarProperty"/>
+        <Class IRI="#IntangibleProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IntermediateBlackHole"/>
+        <Class IRI="#BlackHole"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lifespan"/>
+        <Class IRI="#IntangibleCelestialBodyProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LostComet"/>
+        <Class IRI="#Comet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MagneticField"/>
+        <Class IRI="#TangibleCelestialBodyProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mass"/>
+        <Class IRI="#IntangibleCelestialBodyProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeteorShower"/>
+        <Class IRI="#NaturalEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MinitatureBlackHole"/>
+        <Class IRI="#BlackHole"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NaturalEvent"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NaturalSatellite"/>
+        <Class IRI="#Satellite"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonPeriodicComet"/>
+        <Class IRI="#Comet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OrbitalPeriod"/>
+        <Class IRI="#IntangibleCelestialBodyProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PartialLunarEclipse"/>
+        <Class IRI="#NaturalEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PeriodicComet"/>
+        <Class IRI="#Comet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Planet"/>
+        <Class IRI="#CelestialBody"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Planet"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasIntangiblePlanetProperty"/>
+            <Class IRI="#IntangiblePlanetProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Planet"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTangiblePlanetProperty"/>
+            <Class IRI="#TangiblePlanetProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Planet"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+            <Class IRI="#PlanetCharacteristic"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlanetCharacteristic"/>
+        <Class IRI="#Characteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RadiationLevel"/>
+        <Class IRI="#IntangibleCelestialBodyProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Radius"/>
+        <Class IRI="#IntangibleAsteroidProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Radius"/>
+        <Class IRI="#IntangibleBlackHoleProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Radius"/>
+        <Class IRI="#IntangibleCometProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Radius"/>
+        <Class IRI="#IntangiblePlanetProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Radius"/>
+        <Class IRI="#IntangibleSatelliteProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Radius"/>
+        <Class IRI="#IntangibleStarProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rain"/>
+        <Class IRI="#NaturalEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ring"/>
+        <Class IRI="#TangiblePlanetProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ring"/>
+        <Class IRI="#TangibleSatelliteProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ring"/>
+        <Class IRI="#TangibleStarProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RotationAngle"/>
+        <Class IRI="#IntangibleCelestialBodyProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Satellite"/>
+        <Class IRI="#CelestialBody"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Satellite"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasIntangibleSatelliteProperty"/>
+            <Class IRI="#IntangibleSatelliteProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Satellite"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTangibleSatelliteProperty"/>
+            <Class IRI="#TangibleSatelliteProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Satellite"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+            <Class IRI="#SatelliteCharacteristic"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SatelliteCharacteristic"/>
+        <Class IRI="#Characteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shape"/>
+        <Class IRI="#TangibleCelestialBodyProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SolarCycle"/>
+        <Class IRI="#IntangibleStarProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SolarFlare"/>
+        <Class IRI="#NaturalEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SolarNebula"/>
+        <Class IRI="#FormationEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SolarStorm"/>
+        <Class IRI="#Storm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Speed"/>
+        <Class IRI="#IntangibleAsteroidProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Speed"/>
+        <Class IRI="#IntangibleCometProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Speed"/>
+        <Class IRI="#IntangibleSatelliteProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Star"/>
+        <Class IRI="#CelestialBody"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Star"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasIntangibleStarProperty"/>
+            <Class IRI="#IntangibleStarProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Star"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTangibleStarProperty"/>
+            <Class IRI="#TangibleStarProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Star"/>
+        <ObjectMinCardinality cardinality="0">
+            <ObjectProperty IRI="#hasStarCharacteristic"/>
+            <Class IRI="#StarCharacteristic"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StarCharacteristic"/>
+        <Class IRI="#Characteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StellarBlackHole"/>
+        <Class IRI="#BlackHole"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StellarWind"/>
+        <Class IRI="#NaturalEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Storm"/>
+        <Class IRI="#NaturalEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SungrazingComet"/>
+        <Class IRI="#Comet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SupermassiveBlackHole"/>
+        <Class IRI="#BlackHole"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Surface"/>
+        <Class IRI="#TangibleAsteroidProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Surface"/>
+        <Class IRI="#TangibleCometProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Surface"/>
+        <Class IRI="#TangiblePlanetProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Surface"/>
+        <Class IRI="#TangibleSatelliteProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Surface"/>
+        <Class IRI="#TangibleStarProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TangibleAsteroidProperty"/>
+        <Class IRI="#TangibleProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TangibleBlackHoleProperty"/>
+        <Class IRI="#TangibleProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TangibleCelestialBodyProperty"/>
+        <Class IRI="#TangibleProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TangibleCometProperty"/>
+        <Class IRI="#TangibleProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TangiblePlanetProperty"/>
+        <Class IRI="#TangibleProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TangibleSatelliteProperty"/>
+        <Class IRI="#TangibleProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TangibleStarProperty"/>
+        <Class IRI="#TangibleProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Temperature"/>
+        <Class IRI="#IntangibleCelestialBodyProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TerrestrialPlanet"/>
+        <Class IRI="#Planet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tornado"/>
+        <Class IRI="#NaturalEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tsunami"/>
+        <Class IRI="#NaturalEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TypeCAsteroid"/>
+        <Class IRI="#Asteroid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TypeMAsteroid"/>
+        <Class IRI="#Asteroid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TypeSAsteroid"/>
+        <Class IRI="#Asteroid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VolcanicEruption"/>
+        <Class IRI="#NaturalEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WaterBody"/>
+        <Class IRI="#TangiblePlanetProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WaterBody"/>
+        <Class IRI="#TangibleSatelliteProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WindSpeed"/>
+        <Class IRI="#IntangiblePlanetProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WindSpeed"/>
+        <Class IRI="#IntangibleSatelliteProperty"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Asteroid"/>
+        <Class IRI="#BlackHole"/>
+        <Class IRI="#Comet"/>
+        <Class IRI="#Planet"/>
+        <Class IRI="#Satellite"/>
+        <Class IRI="#Star"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#ClassKStar"/>
+        <NamedIndividual IRI="#Alpha_Centauri_B"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClassAStar"/>
+        <NamedIndividual IRI="#Altair_A7_V"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Amalthea"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SurfaceMaterial"/>
+        <NamedIndividual IRI="#Andesite"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AtmosphereElement"/>
+        <NamedIndividual IRI="#Argon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Ariel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SurfaceMaterial"/>
+        <NamedIndividual IRI="#Basalt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClassMStar"/>
+        <NamedIndividual IRI="#Betelgeuse"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Colour"/>
+        <NamedIndividual IRI="#Blue"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Calisto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AtmosphereElement"/>
+        <NamedIndividual IRI="#Carbon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AsteroidCharacteristic"/>
+        <NamedIndividual IRI="#Carbon_based"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Particle"/>
+        <NamedIndividual IRI="#Charged_Particle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Charon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClimateRegion"/>
+        <NamedIndividual IRI="#Continental_Climate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PlanetCharacteristic"/>
+        <NamedIndividual IRI="#Crop_Life_Sustaining"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Crop_Life_Sustaining"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#StellarBlackHole"/>
+        <NamedIndividual IRI="#Cygnus_X-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Deimos"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Dione"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CelestialBodyCharacteristic"/>
+        <NamedIndividual IRI="#Discovered"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CelestialBodyCharacteristic"/>
+        <NamedIndividual IRI="#Discovered_Life"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClimateRegion"/>
+        <NamedIndividual IRI="#Dry_Climate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SurfaceMaterial"/>
+        <NamedIndividual IRI="#Dust"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RingMaterial"/>
+        <NamedIndividual IRI="#Dust_Particle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RadiationType"/>
+        <NamedIndividual IRI="#ELF"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TerrestrialPlanet"/>
+        <NamedIndividual IRI="#Earth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Atmosphere"/>
+        <NamedIndividual IRI="#Earth_Atmosphere"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Core"/>
+        <NamedIndividual IRI="#Earth_Core"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MagneticField"/>
+        <NamedIndividual IRI="#Earth_Magnetic_Field"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Surface"/>
+        <NamedIndividual IRI="#Earth_Surface"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WaterBody"/>
+        <NamedIndividual IRI="#Earth_Water"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Enceladus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Particle"/>
+        <NamedIndividual IRI="#Energised_Particle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TypeSAsteroid"/>
+        <NamedIndividual IRI="#Eunomia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Europa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SignalTransmission"/>
+        <NamedIndividual IRI="#Fieldbus_Transmission"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SignalTransmission"/>
+        <NamedIndividual IRI="#Four-Wire_Transmission"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalEvent"/>
+        <NamedIndividual IRI="#Full_Lunar_Eclipse"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IntermediateBlackHole"/>
+        <NamedIndividual IRI="#GCIRS_13E"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RadiationType"/>
+        <NamedIndividual IRI="#Gamma_Ray"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Ganymede"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PlanetCharacteristic"/>
+        <NamedIndividual IRI="#Gaseous"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalEvent"/>
+        <NamedIndividual IRI="#Geothermal_Storm"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Colour"/>
+        <NamedIndividual IRI="#Green"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CelestialBodyCharacteristic"/>
+        <NamedIndividual IRI="#Has_Existing_Infrastructure"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AtmosphereElement"/>
+        <NamedIndividual IRI="#Helium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProducibleElement"/>
+        <NamedIndividual IRI="#Helium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClimateRegion"/>
+        <NamedIndividual IRI="#Highlands_Climate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PlanetCharacteristic"/>
+        <NamedIndividual IRI="#Human_Life_Sustaining"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Human_Life_Sustaining"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AtmosphereElement"/>
+        <NamedIndividual IRI="#Hydrogen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProducibleElement"/>
+        <NamedIndividual IRI="#Hydrogen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TypeCAsteroid"/>
+        <NamedIndividual IRI="#Hygiea"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Hyperion"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Iapetus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RingMaterial"/>
+        <NamedIndividual IRI="#Ice"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RadiationType"/>
+        <NamedIndividual IRI="#Infrared"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Io"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CoreMaterial"/>
+        <NamedIndividual IRI="#Iron"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GaseousPlanet"/>
+        <NamedIndividual IRI="#Jupiter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ArtificialSatellite"/>
+        <NamedIndividual IRI="#Kepler"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SungrazingComet"/>
+        <NamedIndividual IRI="#Kreutz"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProducibleElement"/>
+        <NamedIndividual IRI="#Lithium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Man_Made"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TerrestrialPlanet"/>
+        <NamedIndividual IRI="#Mars"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TerrestrialPlanet"/>
+        <NamedIndividual IRI="#Mercury"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AsteroidCharacteristic"/>
+        <NamedIndividual IRI="#Metallic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalEvent"/>
+        <NamedIndividual IRI="#Meteor_Shower"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RadiationType"/>
+        <NamedIndividual IRI="#Microwave"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Mimas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Miranda"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Moon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GaseousPlanet"/>
+        <NamedIndividual IRI="#Neptune"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Nereid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CoreMaterial"/>
+        <NamedIndividual IRI="#Nickel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AtmosphereElement"/>
+        <NamedIndividual IRI="#Nitrogen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Oberon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shape"/>
+        <NamedIndividual IRI="#Oblate_Spheroid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SurfaceMaterial"/>
+        <NamedIndividual IRI="#Olivine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Colour"/>
+        <NamedIndividual IRI="#Orange"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AtmosphereElement"/>
+        <NamedIndividual IRI="#Oxygen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalEvent"/>
+        <NamedIndividual IRI="#Partial_Lunar_Eclipse"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Pheobe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Phobos"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Colour"/>
+        <NamedIndividual IRI="#Pink"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TerrestrialPlanet"/>
+        <NamedIndividual IRI="#Pluto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClimateRegion"/>
+        <NamedIndividual IRI="#Polar_Climate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClassFStar"/>
+        <NamedIndividual IRI="#Polaris"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TypeMAsteroid"/>
+        <NamedIndividual IRI="#Psyche"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Colour"/>
+        <NamedIndividual IRI="#Purple"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SurfaceMaterial"/>
+        <NamedIndividual IRI="#Pyroxene"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RadiationType"/>
+        <NamedIndividual IRI="#Radio_Wave"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalEvent"/>
+        <NamedIndividual IRI="#Rain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Colour"/>
+        <NamedIndividual IRI="#Red"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClassBStar"/>
+        <NamedIndividual IRI="#Regulus_and_Algol_A"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Rhea"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RingMaterial"/>
+        <NamedIndividual IRI="#Rock"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PlanetCharacteristic"/>
+        <NamedIndividual IRI="#Rocky"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CelestialBodyCharacteristic"/>
+        <NamedIndividual IRI="#Safe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GaseousPlanet"/>
+        <NamedIndividual IRI="#Saturn"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ring"/>
+        <NamedIndividual IRI="#Saturn_Ring"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CelestialBodyCharacteristic"/>
+        <NamedIndividual IRI="#Self-Illuminating"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CoreMaterial"/>
+        <NamedIndividual IRI="#Siderophile"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SurfaceMaterial"/>
+        <NamedIndividual IRI="#Silica_Rock"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProducibleElement"/>
+        <NamedIndividual IRI="#Silicon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SignalTransmission"/>
+        <NamedIndividual IRI="#Smart_Transmission"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalEvent"/>
+        <NamedIndividual IRI="#Solar_Flare"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FormationEvent"/>
+        <NamedIndividual IRI="#Solar_Nebula"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalEvent"/>
+        <NamedIndividual IRI="#Solar_Storm"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shape"/>
+        <NamedIndividual IRI="#Sphere"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalEvent"/>
+        <NamedIndividual IRI="#Stellar_Wind"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AsteroidCharacteristic"/>
+        <NamedIndividual IRI="#Stony"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalEvent"/>
+        <NamedIndividual IRI="#Storm"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClimateRegion"/>
+        <NamedIndividual IRI="#Subtropical_Climate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SurfaceMaterial"/>
+        <NamedIndividual IRI="#Sulphate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CoreMaterial"/>
+        <NamedIndividual IRI="#Sulphur"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClassGStar"/>
+        <NamedIndividual IRI="#Sun"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PlanetCharacteristic"/>
+        <NamedIndividual IRI="#Terraformable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Terraformable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Tethys"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Titan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Titania"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SupermassiveBlackHole"/>
+        <NamedIndividual IRI="#Ton_618"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalEvent"/>
+        <NamedIndividual IRI="#Tornado"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shape"/>
+        <NamedIndividual IRI="#Triaxial_Ellipsoid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Triton"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClimateRegion"/>
+        <NamedIndividual IRI="#Tropical_Climate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalEvent"/>
+        <NamedIndividual IRI="#Tsunami"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SignalTransmission"/>
+        <NamedIndividual IRI="#Two-Wire_Transmission"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalSatellite"/>
+        <NamedIndividual IRI="#Umbriel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GaseousPlanet"/>
+        <NamedIndividual IRI="#Uranus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RadiationType"/>
+        <NamedIndividual IRI="#VLF"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TerrestrialPlanet"/>
+        <NamedIndividual IRI="#Venus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RadiationType"/>
+        <NamedIndividual IRI="#Visible_Light"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CelestialBodyCharacteristic"/>
+        <NamedIndividual IRI="#Visited"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NaturalEvent"/>
+        <NamedIndividual IRI="#Volcanic_Eruption"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RadiationType"/>
+        <NamedIndividual IRI="#X-Ray"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Colour"/>
+        <NamedIndividual IRI="#Yellow"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClassOStar"/>
+        <NamedIndividual IRI="#Zeta_Orionis_Aa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LostComet"/>
+        <NamedIndividual IRI="#Biela&apos;s_Comet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NonPeriodicComet"/>
+        <NamedIndividual IRI="#C/1980_E1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PeriodicComet"/>
+        <NamedIndividual IRI="#Halley&apos;s_Comet"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Amalthea"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Amalthea"/>
+        <NamedIndividual IRI="#Jupiter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Ariel"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Ariel"/>
+        <NamedIndividual IRI="#Uranus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Calisto"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Calisto"/>
+        <NamedIndividual IRI="#Jupiter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Charon"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Charon"/>
+        <NamedIndividual IRI="#Pluto"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Deimos"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Deimos"/>
+        <NamedIndividual IRI="#Mars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Dione"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Dione"/>
+        <NamedIndividual IRI="#Saturn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#experiences"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Full_Lunar_Eclipse"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#experiences"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Geothermal_Storm"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#experiences"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Meteor_Shower"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#experiences"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Partial_Lunar_Eclipse"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#experiences"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Rain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#experiences"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Storm"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#experiences"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Tornado"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#experiences"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Tsunami"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#experiences"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Volcanic_Eruption"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#formedFrom"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Solar_Nebula"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCelestialBodyCharacteristic"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Discovered"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCelestialBodyCharacteristic"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Discovered_Life"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCelestialBodyCharacteristic"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Has_Existing_Infrastructure"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCelestialBodyCharacteristic"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Self-Illuminating"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasCelestialBodyCharacteristic"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Visited"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasClimateRegion"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Continental_Climate"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasClimateRegion"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Dry_Climate"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasClimateRegion"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Highlands_Climate"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasClimateRegion"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Polar_Climate"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasClimateRegion"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Subtropical_Climate"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasClimateRegion"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Tropical_Climate"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Crop_Life_Sustaining"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Human_Life_Sustaining"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Rocky"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Terraformable"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTangibleCelestialBodyProperty"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Earth_Magnetic_Field"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTangibleCelestialBodyProperty"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Oblate_Spheroid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTangiblePlanetProperty"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Earth_Atmosphere"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTangiblePlanetProperty"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Earth_Core"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTangiblePlanetProperty"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Earth_Surface"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTangiblePlanetProperty"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Earth_Water"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Earth"/>
+        <NamedIndividual IRI="#Sun"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#compriseOf"/>
+        <NamedIndividual IRI="#Earth_Atmosphere"/>
+        <NamedIndividual IRI="#Argon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#compriseOf"/>
+        <NamedIndividual IRI="#Earth_Atmosphere"/>
+        <NamedIndividual IRI="#Nitrogen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#compriseOf"/>
+        <NamedIndividual IRI="#Earth_Atmosphere"/>
+        <NamedIndividual IRI="#Oxygen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#compriseOf"/>
+        <NamedIndividual IRI="#Earth_Core"/>
+        <NamedIndividual IRI="#Iron"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#compriseOf"/>
+        <NamedIndividual IRI="#Earth_Core"/>
+        <NamedIndividual IRI="#Nickel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Enceladus"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Enceladus"/>
+        <NamedIndividual IRI="#Saturn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAsteroidCharacteristic"/>
+        <NamedIndividual IRI="#Eunomia"/>
+        <NamedIndividual IRI="#Stony"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Europa"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Europa"/>
+        <NamedIndividual IRI="#Jupiter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Ganymede"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Ganymede"/>
+        <NamedIndividual IRI="#Jupiter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAsteroidCharacteristic"/>
+        <NamedIndividual IRI="#Hygiea"/>
+        <NamedIndividual IRI="#Carbon_based"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Hyperion"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Hyperion"/>
+        <NamedIndividual IRI="#Saturn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Iapetus"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Iapetus"/>
+        <NamedIndividual IRI="#Saturn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Io"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Io"/>
+        <NamedIndividual IRI="#Jupiter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+        <NamedIndividual IRI="#Jupiter"/>
+        <NamedIndividual IRI="#Gaseous"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Jupiter"/>
+        <NamedIndividual IRI="#Sun"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Kepler"/>
+        <NamedIndividual IRI="#Man_Made"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Kepler"/>
+        <NamedIndividual IRI="#Earth"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+        <NamedIndividual IRI="#Mars"/>
+        <NamedIndividual IRI="#Rocky"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Mars"/>
+        <NamedIndividual IRI="#Sun"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+        <NamedIndividual IRI="#Mercury"/>
+        <NamedIndividual IRI="#Rocky"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Mercury"/>
+        <NamedIndividual IRI="#Sun"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Mimas"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Mimas"/>
+        <NamedIndividual IRI="#Saturn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Miranda"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Miranda"/>
+        <NamedIndividual IRI="#Uranus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Moon"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Moon"/>
+        <NamedIndividual IRI="#Earth"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+        <NamedIndividual IRI="#Neptune"/>
+        <NamedIndividual IRI="#Gaseous"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Neptune"/>
+        <NamedIndividual IRI="#Sun"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Nereid"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Nereid"/>
+        <NamedIndividual IRI="#Neptune"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Oberon"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Oberon"/>
+        <NamedIndividual IRI="#Uranus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Pheobe"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Pheobe"/>
+        <NamedIndividual IRI="#Saturn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Phobos"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Phobos"/>
+        <NamedIndividual IRI="#Mars"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+        <NamedIndividual IRI="#Pluto"/>
+        <NamedIndividual IRI="#Rocky"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Pluto"/>
+        <NamedIndividual IRI="#Sun"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAsteroidCharacteristic"/>
+        <NamedIndividual IRI="#Psyche"/>
+        <NamedIndividual IRI="#Metallic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Rhea"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Rhea"/>
+        <NamedIndividual IRI="#Saturn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+        <NamedIndividual IRI="#Saturn"/>
+        <NamedIndividual IRI="#Gaseous"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTangiblePlanetProperty"/>
+        <NamedIndividual IRI="#Saturn"/>
+        <NamedIndividual IRI="#Saturn_Ring"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Saturn"/>
+        <NamedIndividual IRI="#Sun"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#compriseOf"/>
+        <NamedIndividual IRI="#Saturn_Ring"/>
+        <NamedIndividual IRI="#Dust_Particle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#compriseOf"/>
+        <NamedIndividual IRI="#Saturn_Ring"/>
+        <NamedIndividual IRI="#Ice"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#compriseOf"/>
+        <NamedIndividual IRI="#Saturn_Ring"/>
+        <NamedIndividual IRI="#Rock"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#emits"/>
+        <NamedIndividual IRI="#Sun"/>
+        <NamedIndividual IRI="#Charged_Particle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#emits"/>
+        <NamedIndividual IRI="#Sun"/>
+        <NamedIndividual IRI="#Energised_Particle"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#produces"/>
+        <NamedIndividual IRI="#Sun"/>
+        <NamedIndividual IRI="#Helium"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#produces"/>
+        <NamedIndividual IRI="#Sun"/>
+        <NamedIndividual IRI="#Hydrogen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Tethys"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Tethys"/>
+        <NamedIndividual IRI="#Saturn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Titan"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Titan"/>
+        <NamedIndividual IRI="#Saturn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Titania"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Titania"/>
+        <NamedIndividual IRI="#Uranus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#feedsOff"/>
+        <NamedIndividual IRI="#Ton_618"/>
+        <NamedIndividual IRI="#Zeta_Orionis_Aa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Triton"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Triton"/>
+        <NamedIndividual IRI="#Neptune"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <NamedIndividual IRI="#Umbriel"/>
+        <NamedIndividual IRI="#Natural"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Umbriel"/>
+        <NamedIndividual IRI="#Uranus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+        <NamedIndividual IRI="#Uranus"/>
+        <NamedIndividual IRI="#Gaseous"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Uranus"/>
+        <NamedIndividual IRI="#Sun"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+        <NamedIndividual IRI="#Venus"/>
+        <NamedIndividual IRI="#Rocky"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#orbits"/>
+        <NamedIndividual IRI="#Venus"/>
+        <NamedIndividual IRI="#Sun"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStellarTemperature"/>
+        <NamedIndividual IRI="#Alpha_Centauri_B"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">5260</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStellarTemperature"/>
+        <NamedIndividual IRI="#Altair_A7_V"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">8500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStellarTemperature"/>
+        <NamedIndividual IRI="#Betelgeuse"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">3450</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSolarMass"/>
+        <NamedIndividual IRI="#Cygnus_X-1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">21.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>in km</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasRadius"/>
+        <NamedIndividual IRI="#Dione"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">561.4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>hours</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasDayLength"/>
+        <NamedIndividual IRI="#Earth"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">24.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Mean density (kg/m^3)</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasDensity"/>
+        <NamedIndividual IRI="#Earth"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">5513</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>m/s^2</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasGravityStrength"/>
+        <NamedIndividual IRI="#Earth"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.807</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>in billions of years</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasLifeSpan"/>
+        <NamedIndividual IRI="#Earth"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">4.25</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Mass (10^24 kg)</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasMass"/>
+        <NamedIndividual IRI="#Earth"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">5.9722</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>days</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasOrbitalPeriod"/>
+        <NamedIndividual IRI="#Earth"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">365</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>in mSv</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasRadiationLevel"/>
+        <NamedIndividual IRI="#Earth"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.21</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>in km</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasRadius"/>
+        <NamedIndividual IRI="#Earth"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">6371</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>degrees</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasRotationAngle"/>
+        <NamedIndividual IRI="#Earth"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">23.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>In mph</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasWindSpeed"/>
+        <NamedIndividual IRI="#Earth"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">7.4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAtmosphereLayer"/>
+        <NamedIndividual IRI="#Earth_Atmosphere"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>in pounds per square inch</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasAtmospherePressure"/>
+        <NamedIndividual IRI="#Earth_Atmosphere"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">14.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>in nT</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasMagneticFieldStrength"/>
+        <NamedIndividual IRI="#Earth_Magnetic_Field"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">30000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSurfaceLayer"/>
+        <NamedIndividual IRI="#Earth_Surface"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>in bar</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasSurfacePressure"/>
+        <NamedIndividual IRI="#Earth_Surface"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.013</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>in degrees celcius</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasSurfaceTemperature"/>
+        <NamedIndividual IRI="#Earth_Surface"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">13.9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasAvgWaterPH"/>
+        <NamedIndividual IRI="#Earth_Water"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">8.1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>in km</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasRadius"/>
+        <NamedIndividual IRI="#Enceladus"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">252.1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSolarMass"/>
+        <NamedIndividual IRI="#GCIRS_13E"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1300.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRadius"/>
+        <NamedIndividual IRI="#Hyperion"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">135</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRadius"/>
+        <NamedIndividual IRI="#Iapetus"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">734.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>years</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasPeriod"/>
+        <NamedIndividual IRI="#Kreutz"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>miles per second</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasSpeed"/>
+        <NamedIndividual IRI="#Kreutz"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">373</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>in km</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasRadius"/>
+        <NamedIndividual IRI="#Mimas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">198.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>in km</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasRadius"/>
+        <NamedIndividual IRI="#Pheobe"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">106.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStellarTemperature"/>
+        <NamedIndividual IRI="#Polaris"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">6015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStellarTemperature"/>
+        <NamedIndividual IRI="#Regulus_and_Algol_A"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">12460</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>in km</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasRadius"/>
+        <NamedIndividual IRI="#Rhea"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">763.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRingWidth"/>
+        <NamedIndividual IRI="#Saturn_Ring"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">270000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>in astronomical units (AU)</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasHabitableZone"/>
+        <NamedIndividual IRI="#Sun"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0.95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStellarTemperature"/>
+        <NamedIndividual IRI="#Sun"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">5778</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>in km</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasRadius"/>
+        <NamedIndividual IRI="#Tethys"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">531</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasRadius"/>
+        <NamedIndividual IRI="#Titan"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2574.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasSolarMass"/>
+        <NamedIndividual IRI="#Ton_618"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">6.5999999E10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasStellarTemperature"/>
+        <NamedIndividual IRI="#Zeta_Orionis_Aa"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">29000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>years</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasPeriod"/>
+        <NamedIndividual IRI="#Biela&apos;s_Comet"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">350</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>years</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasPeriod"/>
+        <NamedIndividual IRI="#C/1980_E1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>years</Literal>
+        </Annotation>
+        <DataProperty IRI="#hasPeriod"/>
+        <NamedIndividual IRI="#Halley&apos;s_Comet"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">50</Literal>
+    </DataPropertyAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#formedFrom"/>
+    </FunctionalObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#allowsFor"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#emits"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#experiences"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#filters"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#formedFrom"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasAsteroidCharacteristic"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasBlackHoleCharacteristic"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasCelesialBodyCharacteristic"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasCelestialBodyCharacteristic"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasClimateRegion"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasCometCharacteristic"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasIntangibleAsteroidProperty"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasIntangibleBlackHoleProperty"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasIntangibleCelestialBodyProperty"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasIntangibleCometProperty"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasIntangiblePlanetProperty"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasIntangibleSatelliteProperty"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasIntangibleStarProperty"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasStarCharacteristic"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasTangibleAsteroidProperty"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasTangibleBlackHoleProperty"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasTangibleCelestialBodyProperty"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasTangibleCometProperty"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasTangiblePlanetProperty"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasTangibleSatelliteProperty"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hasTangibleStarProperty"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#orbits"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#produces"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#radiates"/>
+    </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#compriseOf"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#contains"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#feedsOff"/>
+    </TransitiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#allowsFor"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#emits"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#experiences"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#filters"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#formedFrom"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasAsteroidCharacteristic"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasBlackHoleCharacteristic"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasCelesialBodyCharacteristic"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasCelestialBodyCharacteristic"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasClimateRegion"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasCometCharacteristic"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasIntangibleAsteroidProperty"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasIntangibleBlackHoleProperty"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasIntangibleCelestialBodyProperty"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasIntangibleCometProperty"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasIntangiblePlanetProperty"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasIntangibleSatelliteProperty"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasIntangibleStarProperty"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasStarCharacteristic"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasTangibleAsteroidProperty"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasTangibleBlackHoleProperty"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasTangibleCelestialBodyProperty"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasTangibleCometProperty"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasTangiblePlanetProperty"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasTangibleSatelliteProperty"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasTangibleStarProperty"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#orbits"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#produces"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#radiates"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#allowsFor"/>
+        <Class IRI="#ArtificialSatellite"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#compriseOf"/>
+        <ObjectUnionOf>
+            <Class IRI="#Atmosphere"/>
+            <Class IRI="#Core"/>
+            <Class IRI="#Ring"/>
+            <Class IRI="#Surface"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#contains"/>
+        <ObjectUnionOf>
+            <Class IRI="#Comet"/>
+            <Class IRI="#NaturalSatellite"/>
+            <Class IRI="#Planet"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#emits"/>
+        <Class IRI="#Star"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#experiences"/>
+        <ObjectUnionOf>
+            <Class IRI="#NaturalSatellite"/>
+            <Class IRI="#Planet"/>
+            <Class IRI="#Star"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#feedsOff"/>
+        <Class IRI="#BlackHole"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#filters"/>
+        <Class IRI="#Atmosphere"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#formedFrom"/>
+        <Class IRI="#CelestialBody"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAsteroidCharacteristic"/>
+        <Class IRI="#Asteroid"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBlackHoleCharacteristic"/>
+        <Class IRI="#BlackHole"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCelesialBodyCharacteristic"/>
+        <Class IRI="#CelestialBody"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCelestialBodyCharacteristic"/>
+        <Class IRI="#CelestialBody"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasClimateRegion"/>
+        <Class IRI="#Planet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCometCharacteristic"/>
+        <Class IRI="#Comet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasIntangibleAsteroidProperty"/>
+        <Class IRI="#Asteroid"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasIntangibleBlackHoleProperty"/>
+        <Class IRI="#BlackHole"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasIntangibleCelestialBodyProperty"/>
+        <Class IRI="#CelestialBody"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasIntangibleCometProperty"/>
+        <Class IRI="#Comet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasIntangiblePlanetProperty"/>
+        <Class IRI="#Planet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasIntangibleSatelliteProperty"/>
+        <Class IRI="#Satellite"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasIntangibleStarProperty"/>
+        <Class IRI="#Star"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+        <Class IRI="#Planet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <Class IRI="#Satellite"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasStarCharacteristic"/>
+        <Class IRI="#Star"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTangibleAsteroidProperty"/>
+        <Class IRI="#Asteroid"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTangibleBlackHoleProperty"/>
+        <Class IRI="#BlackHole"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTangibleCelestialBodyProperty"/>
+        <Class IRI="#CelestialBody"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTangibleCometProperty"/>
+        <Class IRI="#Comet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTangiblePlanetProperty"/>
+        <Class IRI="#Planet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTangibleSatelliteProperty"/>
+        <Class IRI="#Satellite"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTangibleStarProperty"/>
+        <Class IRI="#Star"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#orbits"/>
+        <Class IRI="#CelestialBody"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#produces"/>
+        <Class IRI="#Star"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#radiates"/>
+        <Class IRI="#CelestialBody"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#allowsFor"/>
+        <Class IRI="#SignalTransmission"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#compriseOf"/>
+        <ObjectUnionOf>
+            <Class IRI="#AtmosphereElement"/>
+            <Class IRI="#CoreMaterial"/>
+            <Class IRI="#RingMaterial"/>
+            <Class IRI="#SurfaceMaterial"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="#WaterBody"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#emits"/>
+        <Class IRI="#Particle"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#experiences"/>
+        <Class IRI="#NaturalEvent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#feedsOff"/>
+        <Class IRI="#CelestialBody"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#filters"/>
+        <Class IRI="#RadiationType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#formedFrom"/>
+        <Class IRI="#FormationEvent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAsteroidCharacteristic"/>
+        <Class IRI="#AsteroidCharacteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBlackHoleCharacteristic"/>
+        <Class IRI="#BlackHoleCharacteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCelesialBodyCharacteristic"/>
+        <Class IRI="#CelestialBodyCharacteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCelestialBodyCharacteristic"/>
+        <Class IRI="#CelestialBodyCharacteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasClimateRegion"/>
+        <Class IRI="#ClimateRegion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCometCharacteristic"/>
+        <Class IRI="#CometCharacteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasIntangibleAsteroidProperty"/>
+        <Class IRI="#IntangibleAsteroidProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasIntangibleBlackHoleProperty"/>
+        <Class IRI="#IntangibleBlackHoleProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasIntangibleCelestialBodyProperty"/>
+        <Class IRI="#IntangibleCelestialBodyProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasIntangibleCometProperty"/>
+        <Class IRI="#IntangibleCometProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasIntangiblePlanetProperty"/>
+        <Class IRI="#IntangiblePlanetProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasIntangibleSatelliteProperty"/>
+        <Class IRI="#IntangibleSatelliteProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasIntangibleStarProperty"/>
+        <Class IRI="#IntangibleStarProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPlanetCharacteristic"/>
+        <Class IRI="#PlanetCharacteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSatelliteCharacteristic"/>
+        <Class IRI="#SatelliteCharacteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasStarCharacteristic"/>
+        <Class IRI="#StarCharacteristic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTangibleAsteroidProperty"/>
+        <Class IRI="#TangibleAsteroidProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTangibleBlackHoleProperty"/>
+        <Class IRI="#TangibleBlackHoleProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTangibleCelestialBodyProperty"/>
+        <Class IRI="#TangibleCelestialBodyProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTangibleCometProperty"/>
+        <Class IRI="#TangibleCometProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTangiblePlanetProperty"/>
+        <Class IRI="#TangiblePlanetProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTangibleSatelliteProperty"/>
+        <Class IRI="#TangibleSatelliteProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTangibleStarProperty"/>
+        <Class IRI="#TangibleStarProperty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#orbits"/>
+        <Class IRI="#CelestialBody"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#produces"/>
+        <Class IRI="#ProducibleElement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#radiates"/>
+        <Class IRI="#RadiationType"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAtmosphereLayer"/>
+        <Class IRI="#Atmosphere"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAtmospherePressure"/>
+        <Class IRI="#Atmosphere"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAvgWaterPH"/>
+        <Class IRI="#WaterBody"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDayLength"/>
+        <ObjectUnionOf>
+            <Class IRI="#NaturalSatellite"/>
+            <Class IRI="#Planet"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDensity"/>
+        <Class IRI="#CelestialBody"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasGravityStrength"/>
+        <Class IRI="#CelestialBody"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasHabitableZone"/>
+        <Class IRI="#Star"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLifeSpan"/>
+        <Class IRI="#CelestialBody"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMagneticFieldStrength"/>
+        <Class IRI="#MagneticField"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMass"/>
+        <Class IRI="#CelestialBody"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasOrbitalPeriod"/>
+        <Class IRI="#CelestialBody"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasPeriod"/>
+        <Class IRI="#Comet"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRadiationLevel"/>
+        <Class IRI="#CelestialBody"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRadius"/>
+        <ObjectUnionOf>
+            <Class IRI="#Asteroid"/>
+            <Class IRI="#BlackHole"/>
+            <Class IRI="#Comet"/>
+            <Class IRI="#NaturalSatellite"/>
+            <Class IRI="#Planet"/>
+            <Class IRI="#Star"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRingWidth"/>
+        <Class IRI="#Ring"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRotationAngle"/>
+        <Class IRI="#CelestialBody"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSolarCycle"/>
+        <Class IRI="#Star"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSolarMass"/>
+        <Class IRI="#BlackHole"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSpeed"/>
+        <ObjectUnionOf>
+            <Class IRI="#ArtificialSatellite"/>
+            <Class IRI="#Asteroid"/>
+            <Class IRI="#Comet"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasStellarTemperature"/>
+        <Class IRI="#Star"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSurfaceLayer"/>
+        <Class IRI="#Surface"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSurfacePressure"/>
+        <Class IRI="#Surface"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSurfaceTemperature"/>
+        <Class IRI="#Surface"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTemperature"/>
+        <Class IRI="#CelestialBody"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasWindSpeed"/>
+        <ObjectUnionOf>
+            <Class IRI="#NaturalSatellite"/>
+            <Class IRI="#Planet"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAtmosphereLayer"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAtmospherePressure"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAvgWaterPH"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDayLength"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDensity"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasGravityStrength"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasHabitableZone"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLifeSpan"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMagneticFieldStrength"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMass"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasOrbitalPeriod"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPeriod"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRadiationLevel"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRadius"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRingWidth"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasRotationAngle"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSolarCycle"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSolarMass"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSpeed"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasStellarTemperature"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSurfaceLayer"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSurfacePressure"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSurfaceTemperature"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTemperature"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasWindSpeed"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CelestialBody</IRI>
+        <Literal>The main taxonomy which acts as the classification of celestial bodies.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Characteristic</IRI>
+        <Literal>Part of our 3-tier grouping of terms.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Characteristic</IRI>
+        <Literal>The various characteristics of celestial bodies.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IntangibleProperty</IRI>
+        <Literal>Intangible Properties of celestial bodies.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IntangibleProperty</IRI>
+        <Literal>Note: Since descripion logic logic cannot capture protege datat properties, these can be seen as convenice classes which were used for the modelling of DL statements.
+However, it protege their functionality is fulfilled by the data properties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IntangibleProperty</IRI>
+        <Literal>Part of our 3-tier grouoping of terms.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TangibleProperty</IRI>
+        <Literal>Part of our 3-iter grouping of terms</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TangibleProperty</IRI>
+        <Literal>The various tangibe properties of the celestial body.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasPeriod</IRI>
+        <Literal>in years</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasStellarTemperature</IRI>
+        <Literal>in kelvin (K)</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

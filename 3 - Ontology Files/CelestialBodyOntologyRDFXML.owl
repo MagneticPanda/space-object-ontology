@@ -1,0 +1,3591 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/CelestialBodyOntology"
+     xml:base="http://www.semanticweb.org/CelestialBodyOntology"
+     xmlns:cbo="http://www.semanticweb.org/CelestialBodyOntology#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/CelestialBodyOntology">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/CelestialBodyOntology/1.0.0"/>
+        <rdfs:comment>Knowledge model for the classification and characteristic identification of various celestial body types.</rdfs:comment>
+        <rdfs:comment>Note: Since descripion logic logic cannot capture protege datat properties, the &apos;Intagible Property&apos; subclasses can be seen as convenice classes which were used for the modelling of DL statements.
+
+However, it protege their functionality is fulfilled by the data properties.</rdfs:comment>
+        <rdfs:comment>Note: The focus has been placed on modelling Earth to it&apos;s full extent as it is the primary celestial body upon which the competency questions are based.
+
+It would be infeasible to model every single celestial body instance with the same level of granuality as we did for Earth.
+
+However, all the data populated in this ontology can fully answer all of the competency questions.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#allowsFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#allowsFor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ArtificialSatellite"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SignalTransmission"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#compriseOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#compriseOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Atmosphere"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Core"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Ring"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Surface"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#AtmosphereElement"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#CoreMaterial"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#RingMaterial"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#SurfaceMaterial"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#contains">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Comet"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Planet"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#WaterBody"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#emits -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#emits">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Particle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#experiences -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#experiences">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Planet"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#feedsOff -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#feedsOff">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#BlackHole"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#filters -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#filters">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Atmosphere"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#RadiationType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#formedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#formedFrom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#FormationEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasAsteroidCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasAsteroidCharacteristic">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Asteroid"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#AsteroidCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasBlackHoleCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasBlackHoleCharacteristic">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#BlackHole"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#BlackHoleCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasCelesialBodyCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasCelesialBodyCharacteristic">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBodyCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasCelestialBodyCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasCelestialBodyCharacteristic">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBodyCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasClimateRegion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasClimateRegion">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Planet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ClimateRegion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasCometCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasCometCharacteristic">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Comet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CometCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasIntangibleAsteroidProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasIntangibleAsteroidProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Asteroid"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleAsteroidProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasIntangibleBlackHoleProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasIntangibleBlackHoleProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#BlackHole"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleBlackHoleProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasIntangibleCelestialBodyProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasIntangibleCelestialBodyProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleCelestialBodyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasIntangibleCometProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasIntangibleCometProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Comet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleCometProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasIntangiblePlanetProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasIntangiblePlanetProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Planet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangiblePlanetProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasIntangibleSatelliteProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasIntangibleSatelliteProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Satellite"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleSatelliteProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasIntangibleStarProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasIntangibleStarProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleStarProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasPlanetCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasPlanetCharacteristic">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Planet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#PlanetCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasSatelliteCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasSatelliteCharacteristic">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Satellite"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SatelliteCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasStarCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasStarCharacteristic">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#StarCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasTangibleAsteroidProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasTangibleAsteroidProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Asteroid"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleAsteroidProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasTangibleBlackHoleProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasTangibleBlackHoleProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#BlackHole"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleBlackHoleProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasTangibleCelestialBodyProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasTangibleCelestialBodyProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleCelestialBodyProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasTangibleCometProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasTangibleCometProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Comet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleCometProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasTangiblePlanetProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasTangiblePlanetProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Planet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangiblePlanetProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasTangibleSatelliteProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasTangibleSatelliteProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Satellite"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleSatelliteProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasTangibleStarProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasTangibleStarProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleStarProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#orbits -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#orbits">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#produces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#produces">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ProducibleElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#radiates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#radiates">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#RadiationType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasAtmosphereLayer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasAtmosphereLayer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Atmosphere"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasAtmospherePressure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasAtmospherePressure">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Atmosphere"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasAvgWaterPH -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasAvgWaterPH">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#WaterBody"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasDayLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasDayLength">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Planet"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasDensity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasDensity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasGravityStrength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasGravityStrength">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasHabitableZone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasHabitableZone">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasLifeSpan -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasLifeSpan">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasMagneticFieldStrength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasMagneticFieldStrength">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#MagneticField"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasMass -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasMass">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasOrbitalPeriod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasOrbitalPeriod">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasPeriod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasPeriod">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Comet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>in years</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasRadiationLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasRadiationLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasRadius -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasRadius">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Asteroid"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#BlackHole"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Comet"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Planet"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasRingWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasRingWidth">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Ring"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasRotationAngle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasRotationAngle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasSolarCycle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasSolarCycle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasSolarMass -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasSolarMass">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#BlackHole"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasSpeed">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#ArtificialSatellite"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Asteroid"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Comet"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasStellarTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasStellarTemperature">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>in kelvin (K)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasSurfaceLayer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasSurfaceLayer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Surface"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasSurfacePressure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasSurfacePressure">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Surface"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasSurfaceTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasSurfaceTemperature">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Surface"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasTemperature">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#hasWindSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/CelestialBodyOntology#hasWindSpeed">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Planet"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#ArtificialSatellite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#ArtificialSatellite">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Satellite"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasSatelliteCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Man_Made"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Satellite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Asteroid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Asteroid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasIntangibleAsteroidProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleAsteroidProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasTangibleAsteroidProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleAsteroidProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasAsteroidCharacteristic"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#AsteroidCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#AsteroidCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#AsteroidCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Atmosphere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Atmosphere">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleAsteroidProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangiblePlanetProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleSatelliteProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleStarProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#AtmosphereElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#AtmosphereElement">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#AtmosphereLayer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#AtmosphereLayer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#AtmospherePressure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#AtmospherePressure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#AvgWaterPH -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#AvgWaterPH"/>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#BlackHole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#BlackHole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasIntangibleBlackHoleProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleBlackHoleProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasTangibleBlackHoleProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleBlackHoleProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasBlackHoleCharacteristic"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleBlackHoleProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#BlackHoleCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#BlackHoleCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#CelestialBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasIntangibleCelestialBodyProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleCelestialBodyProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasTangibleCelestialBodyProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleCelestialBodyProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasCelesialBodyCharacteristic"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBodyCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The main taxonomy which acts as the classification of celestial bodies.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#CelestialBodyCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#CelestialBodyCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Characteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Characteristic">
+        <rdfs:comment>Part of our 3-tier grouping of terms.</rdfs:comment>
+        <rdfs:comment>The various characteristics of celestial bodies.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#ClassAStar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#ClassAStar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasStellarTemperature"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7400</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10000</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#ClassBStar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#ClassBStar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasStellarTemperature"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10000</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25000</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#ClassFStar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#ClassFStar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasStellarTemperature"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6000</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7400</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#ClassGStar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#ClassGStar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasStellarTemperature"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5000</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6000</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#ClassKStar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#ClassKStar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasStellarTemperature"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3500</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5000</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#ClassMStar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#ClassMStar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasStellarTemperature"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3500</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#ClassOStar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#ClassOStar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasStellarTemperature"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25000</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50000</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#ClimateRegion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#ClimateRegion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Colour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Colour">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleCelestialBodyProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Comet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Comet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasIntangibleCometProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleCometProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasTangibleCometProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleCometProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasCometCharacteristic"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CometCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#CometCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#CometCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Core -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Core">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleCometProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangiblePlanetProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleSatelliteProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleStarProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#CoreMaterial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#CoreMaterial"/>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#DayLength -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#DayLength">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangiblePlanetProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleSatelliteProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Density -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Density">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleCelestialBodyProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#EventHorizon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#EventHorizon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleBlackHoleProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#FormationEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#FormationEvent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#FullLunarEclipse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#FullLunarEclipse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#GaseousPlanet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#GaseousPlanet">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Planet"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasPlanetCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Gaseous"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Planet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#GeothermalStorm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#GeothermalStorm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Storm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Gravity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Gravity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleCelestialBodyProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#GravityStrength -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#GravityStrength"/>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#HabitableZone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#HabitableZone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleStarProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#IntangibleAsteroidProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#IntangibleAsteroidProperty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#IntangibleBlackHoleProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#IntangibleBlackHoleProperty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#IntangibleCelestialBodyProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#IntangibleCelestialBodyProperty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#IntangibleCometProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#IntangibleCometProperty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#IntangiblePlanetProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#IntangiblePlanetProperty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#IntangibleProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#IntangibleProperty">
+        <rdfs:comment>Intangible Properties of celestial bodies.</rdfs:comment>
+        <rdfs:comment>Note: Since descripion logic logic cannot capture protege datat properties, these can be seen as convenice classes which were used for the modelling of DL statements.
+However, it protege their functionality is fulfilled by the data properties.</rdfs:comment>
+        <rdfs:comment>Part of our 3-tier grouoping of terms.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#IntangibleSatelliteProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#IntangibleSatelliteProperty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#IntangibleStarProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#IntangibleStarProperty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#IntermediateBlackHole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#IntermediateBlackHole">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#BlackHole"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasSolarMass"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10000.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#BlackHole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Lifespan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Lifespan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleCelestialBodyProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#LostComet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#LostComet">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Comet"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasPeriod"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Comet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#MagneticField -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#MagneticField">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleCelestialBodyProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#MagneticFieldStrength -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#MagneticFieldStrength"/>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Mass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Mass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleCelestialBodyProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#MeteorShower -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#MeteorShower">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#MinitatureBlackHole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#MinitatureBlackHole">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#BlackHole"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasSolarMass"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#BlackHole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Satellite"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasSatelliteCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Satellite"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#NonPeriodicComet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#NonPeriodicComet">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Comet"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasPeriod"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Comet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#OrbitalPeriod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#OrbitalPeriod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleCelestialBodyProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#PartialLunarEclipse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#PartialLunarEclipse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Particle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Particle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#PeriodicComet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#PeriodicComet">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Comet"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasPeriod"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Comet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Planet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Planet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasIntangiblePlanetProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangiblePlanetProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasTangiblePlanetProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangiblePlanetProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasPlanetCharacteristic"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#PlanetCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#PlanetCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#PlanetCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#ProducibleElement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#ProducibleElement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#RadiationLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#RadiationLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleCelestialBodyProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#RadiationType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#RadiationType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Radius -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Radius">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleAsteroidProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleBlackHoleProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleCometProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangiblePlanetProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleSatelliteProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleStarProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Rain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Rain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Ring -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Ring">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangiblePlanetProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleSatelliteProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleStarProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#RingMaterial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#RingMaterial"/>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#RingWidth -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#RingWidth"/>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#RotationAngle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#RotationAngle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleCelestialBodyProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Satellite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Satellite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasIntangibleSatelliteProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleSatelliteProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasTangibleSatelliteProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleSatelliteProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasSatelliteCharacteristic"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SatelliteCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#SatelliteCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#SatelliteCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Shape -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Shape">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleCelestialBodyProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#SignalTransmission -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#SignalTransmission"/>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#SolarCycle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#SolarCycle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleStarProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#SolarFlare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#SolarFlare">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#SolarNebula -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#SolarNebula">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#FormationEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#SolarStorm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#SolarStorm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Storm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Speed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Speed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleAsteroidProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleCometProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleSatelliteProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Star -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Star">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBody"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasIntangibleStarProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleStarProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasTangibleStarProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleStarProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasStarCharacteristic"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#StarCharacteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#StarCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#StarCharacteristic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Characteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#StellarBlackHole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#StellarBlackHole">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#BlackHole"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasSolarMass"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#BlackHole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#StellarWind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#StellarWind">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Storm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Storm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#SungrazingComet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#SungrazingComet">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Comet"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasPeriod"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Comet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#SupermassiveBlackHole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#SupermassiveBlackHole">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#BlackHole"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasSolarMass"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100000.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#BlackHole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Surface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Surface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleAsteroidProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleCometProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangiblePlanetProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleSatelliteProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleStarProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#SurfaceLayer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#SurfaceLayer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#SurfaceMaterial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#SurfaceMaterial"/>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#SurfaceTemperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#SurfaceTemperature"/>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#TangibleAsteroidProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#TangibleAsteroidProperty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#TangibleBlackHoleProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#TangibleBlackHoleProperty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#TangibleCelestialBodyProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#TangibleCelestialBodyProperty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#TangibleCometProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#TangibleCometProperty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#TangiblePlanetProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#TangiblePlanetProperty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#TangibleProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#TangibleProperty">
+        <rdfs:comment>Part of our 3-iter grouping of terms</rdfs:comment>
+        <rdfs:comment>The various tangibe properties of the celestial body.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#TangibleSatelliteProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#TangibleSatelliteProperty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#TangibleStarProperty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#TangibleStarProperty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Temperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Temperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleCelestialBodyProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#TerrestrialPlanet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#TerrestrialPlanet">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Planet"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasPlanetCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Rocky"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Planet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Tornado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Tornado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Tsunami -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Tsunami">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#TypeCAsteroid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#TypeCAsteroid">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Asteroid"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasAsteroidCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Carbon_based"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Asteroid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#TypeMAsteroid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#TypeMAsteroid">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Asteroid"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasAsteroidCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Metallic"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Asteroid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#TypeSAsteroid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#TypeSAsteroid">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Asteroid"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasAsteroidCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Stony"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Asteroid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#VolcanicEruption -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#VolcanicEruption">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#WaterBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#WaterBody">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangiblePlanetProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TangibleSatelliteProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#WindSpeed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/CelestialBodyOntology#WindSpeed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangiblePlanetProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntangibleSatelliteProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Alpha_Centauri_B -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Alpha_Centauri_B">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ClassKStar"/>
+        <cbo:hasStellarTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5260</cbo:hasStellarTemperature>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Altair_A7_V -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Altair_A7_V">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ClassAStar"/>
+        <cbo:hasStellarTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8500</cbo:hasStellarTemperature>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Amalthea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Amalthea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Jupiter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Andesite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Andesite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SurfaceMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Argon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Argon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#AtmosphereElement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Ariel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Ariel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Uranus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Basalt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Basalt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SurfaceMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Betelgeuse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Betelgeuse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ClassMStar"/>
+        <cbo:hasStellarTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3450</cbo:hasStellarTemperature>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Blue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Blue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Colour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Calisto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Calisto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Jupiter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Carbon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Carbon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#AtmosphereElement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Carbon_based -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Carbon_based">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#AsteroidCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Charged_Particle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Charged_Particle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Particle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Charon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Charon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Pluto"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Continental_Climate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Continental_Climate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ClimateRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Crop_Life_Sustaining -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Crop_Life_Sustaining">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#PlanetCharacteristic"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SatelliteCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Cygnus_X-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Cygnus_X-1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#StellarBlackHole"/>
+        <cbo:hasSolarMass rdf:datatype="http://www.w3.org/2001/XMLSchema#float">21.0</cbo:hasSolarMass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Deimos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Deimos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Mars"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Dione -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Dione">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Saturn"/>
+        <cbo:hasRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">561.4</cbo:hasRadius>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Dione"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasRadius"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">561.4</owl:annotatedTarget>
+        <rdfs:comment>in km</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Discovered -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Discovered">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBodyCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Discovered_Life -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Discovered_Life">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBodyCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Dry_Climate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Dry_Climate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ClimateRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Dust -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Dust">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SurfaceMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Dust_Particle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Dust_Particle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#RingMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#ELF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#ELF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#RadiationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Earth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Earth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TerrestrialPlanet"/>
+        <cbo:experiences rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Full_Lunar_Eclipse"/>
+        <cbo:experiences rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Geothermal_Storm"/>
+        <cbo:experiences rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Meteor_Shower"/>
+        <cbo:experiences rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Partial_Lunar_Eclipse"/>
+        <cbo:experiences rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Rain"/>
+        <cbo:experiences rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Storm"/>
+        <cbo:experiences rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Tornado"/>
+        <cbo:experiences rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Tsunami"/>
+        <cbo:experiences rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Volcanic_Eruption"/>
+        <cbo:formedFrom rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Solar_Nebula"/>
+        <cbo:hasCelestialBodyCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Discovered"/>
+        <cbo:hasCelestialBodyCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Discovered_Life"/>
+        <cbo:hasCelestialBodyCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Has_Existing_Infrastructure"/>
+        <cbo:hasCelestialBodyCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Self-Illuminating"/>
+        <cbo:hasCelestialBodyCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Visited"/>
+        <cbo:hasClimateRegion rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Continental_Climate"/>
+        <cbo:hasClimateRegion rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Dry_Climate"/>
+        <cbo:hasClimateRegion rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Highlands_Climate"/>
+        <cbo:hasClimateRegion rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Polar_Climate"/>
+        <cbo:hasClimateRegion rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Subtropical_Climate"/>
+        <cbo:hasClimateRegion rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Tropical_Climate"/>
+        <cbo:hasPlanetCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Crop_Life_Sustaining"/>
+        <cbo:hasPlanetCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Human_Life_Sustaining"/>
+        <cbo:hasPlanetCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Rocky"/>
+        <cbo:hasPlanetCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Terraformable"/>
+        <cbo:hasTangibleCelestialBodyProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth_Magnetic_Field"/>
+        <cbo:hasTangibleCelestialBodyProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Oblate_Spheroid"/>
+        <cbo:hasTangiblePlanetProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth_Atmosphere"/>
+        <cbo:hasTangiblePlanetProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth_Core"/>
+        <cbo:hasTangiblePlanetProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth_Surface"/>
+        <cbo:hasTangiblePlanetProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth_Water"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Sun"/>
+        <cbo:hasDayLength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.0</cbo:hasDayLength>
+        <cbo:hasDensity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5513</cbo:hasDensity>
+        <cbo:hasGravityStrength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.807</cbo:hasGravityStrength>
+        <cbo:hasLifeSpan rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.25</cbo:hasLifeSpan>
+        <cbo:hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.9722</cbo:hasMass>
+        <cbo:hasOrbitalPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">365</cbo:hasOrbitalPeriod>
+        <cbo:hasRadiationLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.21</cbo:hasRadiationLevel>
+        <cbo:hasRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6371</cbo:hasRadius>
+        <cbo:hasRotationAngle rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23.5</cbo:hasRotationAngle>
+        <cbo:hasWindSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.4</cbo:hasWindSpeed>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasDayLength"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.0</owl:annotatedTarget>
+        <rdfs:comment>hours</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasDensity"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5513</owl:annotatedTarget>
+        <rdfs:comment>Mean density (kg/m^3)</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasGravityStrength"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.807</owl:annotatedTarget>
+        <rdfs:comment>m/s^2</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasLifeSpan"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.25</owl:annotatedTarget>
+        <rdfs:comment>in billions of years</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasMass"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.9722</owl:annotatedTarget>
+        <rdfs:comment>Mass (10^24 kg)</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasOrbitalPeriod"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">365</owl:annotatedTarget>
+        <rdfs:comment>days</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasRadiationLevel"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.21</owl:annotatedTarget>
+        <rdfs:comment>in mSv</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasRadius"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6371</owl:annotatedTarget>
+        <rdfs:comment>in km</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasRotationAngle"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23.5</owl:annotatedTarget>
+        <rdfs:comment>degrees</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasWindSpeed"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.4</owl:annotatedTarget>
+        <rdfs:comment>In mph</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Earth_Atmosphere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Earth_Atmosphere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Atmosphere"/>
+        <cbo:compriseOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Argon"/>
+        <cbo:compriseOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Nitrogen"/>
+        <cbo:compriseOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Oxygen"/>
+        <cbo:hasAtmosphereLayer rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</cbo:hasAtmosphereLayer>
+        <cbo:hasAtmospherePressure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.7</cbo:hasAtmospherePressure>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth_Atmosphere"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasAtmospherePressure"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.7</owl:annotatedTarget>
+        <rdfs:comment>in pounds per square inch</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Earth_Core -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Earth_Core">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Core"/>
+        <cbo:compriseOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Iron"/>
+        <cbo:compriseOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Nickel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Earth_Magnetic_Field -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Earth_Magnetic_Field">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#MagneticField"/>
+        <cbo:hasMagneticFieldStrength rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</cbo:hasMagneticFieldStrength>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth_Magnetic_Field"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasMagneticFieldStrength"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30000</owl:annotatedTarget>
+        <rdfs:comment>in nT</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Earth_Surface -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Earth_Surface">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Surface"/>
+        <cbo:hasSurfaceLayer rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</cbo:hasSurfaceLayer>
+        <cbo:hasSurfacePressure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.013</cbo:hasSurfacePressure>
+        <cbo:hasSurfaceTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.9</cbo:hasSurfaceTemperature>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth_Surface"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasSurfacePressure"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.013</owl:annotatedTarget>
+        <rdfs:comment>in bar</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth_Surface"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasSurfaceTemperature"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.9</owl:annotatedTarget>
+        <rdfs:comment>in degrees celcius</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Earth_Water -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Earth_Water">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#WaterBody"/>
+        <cbo:hasAvgWaterPH rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.1</cbo:hasAvgWaterPH>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Enceladus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Enceladus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Saturn"/>
+        <cbo:hasRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">252.1</cbo:hasRadius>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Enceladus"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasRadius"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">252.1</owl:annotatedTarget>
+        <rdfs:comment>in km</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Energised_Particle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Energised_Particle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Particle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Eunomia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Eunomia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TypeSAsteroid"/>
+        <cbo:hasAsteroidCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Stony"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Europa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Europa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Jupiter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Fieldbus_Transmission -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Fieldbus_Transmission">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SignalTransmission"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Four-Wire_Transmission -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Four-Wire_Transmission">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SignalTransmission"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Full_Lunar_Eclipse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Full_Lunar_Eclipse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#GCIRS_13E -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#GCIRS_13E">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#IntermediateBlackHole"/>
+        <cbo:hasSolarMass rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1300.0</cbo:hasSolarMass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Gamma_Ray -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Gamma_Ray">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#RadiationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Ganymede -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Ganymede">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Jupiter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Gaseous -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Gaseous">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#PlanetCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Geothermal_Storm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Geothermal_Storm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Green -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Green">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Colour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Has_Existing_Infrastructure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Has_Existing_Infrastructure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBodyCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Helium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Helium">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#AtmosphereElement"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ProducibleElement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Highlands_Climate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Highlands_Climate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ClimateRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Human_Life_Sustaining -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Human_Life_Sustaining">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#PlanetCharacteristic"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SatelliteCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Hydrogen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Hydrogen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#AtmosphereElement"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ProducibleElement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Hygiea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Hygiea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TypeCAsteroid"/>
+        <cbo:hasAsteroidCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Carbon_based"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Hyperion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Hyperion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Saturn"/>
+        <cbo:hasRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">135</cbo:hasRadius>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Iapetus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Iapetus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Saturn"/>
+        <cbo:hasRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">734.5</cbo:hasRadius>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Ice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Ice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#RingMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Infrared -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Infrared">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#RadiationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Io -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Io">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Jupiter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Iron -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Iron">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CoreMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Jupiter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Jupiter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#GaseousPlanet"/>
+        <cbo:hasPlanetCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Gaseous"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Sun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Kepler -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Kepler">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ArtificialSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Man_Made"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Kreutz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Kreutz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SungrazingComet"/>
+        <cbo:hasPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#int">18</cbo:hasPeriod>
+        <cbo:hasSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">373</cbo:hasSpeed>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Kreutz"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasPeriod"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#int">18</owl:annotatedTarget>
+        <rdfs:comment>years</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Kreutz"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasSpeed"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">373</owl:annotatedTarget>
+        <rdfs:comment>miles per second</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Lithium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Lithium">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ProducibleElement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Man_Made -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Man_Made">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SatelliteCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Mars -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Mars">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TerrestrialPlanet"/>
+        <cbo:hasPlanetCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Rocky"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Sun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Mercury -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Mercury">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TerrestrialPlanet"/>
+        <cbo:hasPlanetCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Rocky"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Sun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Metallic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Metallic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#AsteroidCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Meteor_Shower -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Meteor_Shower">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Microwave -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Microwave">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#RadiationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Mimas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Mimas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Saturn"/>
+        <cbo:hasRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">198.2</cbo:hasRadius>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Mimas"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasRadius"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">198.2</owl:annotatedTarget>
+        <rdfs:comment>in km</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Miranda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Miranda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Uranus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Moon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Moon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Earth"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Natural -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Natural">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SatelliteCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Neptune -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Neptune">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#GaseousPlanet"/>
+        <cbo:hasPlanetCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Gaseous"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Sun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Nereid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Nereid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Neptune"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Nickel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Nickel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CoreMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Nitrogen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Nitrogen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#AtmosphereElement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Oberon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Oberon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Uranus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Oblate_Spheroid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Oblate_Spheroid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Shape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Olivine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Olivine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SurfaceMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Orange -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Orange">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Colour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Oxygen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Oxygen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#AtmosphereElement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Partial_Lunar_Eclipse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Partial_Lunar_Eclipse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Pheobe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Pheobe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Saturn"/>
+        <cbo:hasRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">106.5</cbo:hasRadius>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Pheobe"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasRadius"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">106.5</owl:annotatedTarget>
+        <rdfs:comment>in km</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Phobos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Phobos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Mars"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Pink -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Pink">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Colour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Pluto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Pluto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TerrestrialPlanet"/>
+        <cbo:hasPlanetCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Rocky"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Sun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Polar_Climate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Polar_Climate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ClimateRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Polaris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Polaris">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ClassFStar"/>
+        <cbo:hasStellarTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6015</cbo:hasStellarTemperature>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Psyche -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Psyche">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TypeMAsteroid"/>
+        <cbo:hasAsteroidCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Metallic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Purple -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Purple">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Colour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Pyroxene -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Pyroxene">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SurfaceMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Radio_Wave -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Radio_Wave">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#RadiationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Rain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Rain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Red -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Red">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Colour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Regulus_and_Algol_A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Regulus_and_Algol_A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ClassBStar"/>
+        <cbo:hasStellarTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12460</cbo:hasStellarTemperature>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Rhea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Rhea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Saturn"/>
+        <cbo:hasRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">763.8</cbo:hasRadius>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Rhea"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasRadius"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">763.8</owl:annotatedTarget>
+        <rdfs:comment>in km</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Rock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Rock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#RingMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Rocky -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Rocky">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#PlanetCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Safe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Safe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBodyCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Saturn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Saturn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#GaseousPlanet"/>
+        <cbo:hasPlanetCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Gaseous"/>
+        <cbo:hasTangiblePlanetProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Saturn_Ring"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Sun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Saturn_Ring -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Saturn_Ring">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Ring"/>
+        <cbo:compriseOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Dust_Particle"/>
+        <cbo:compriseOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Ice"/>
+        <cbo:compriseOf rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Rock"/>
+        <cbo:hasRingWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">270000</cbo:hasRingWidth>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Self-Illuminating -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Self-Illuminating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBodyCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Siderophile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Siderophile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CoreMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Silica_Rock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Silica_Rock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SurfaceMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Silicon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Silicon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ProducibleElement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Smart_Transmission -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Smart_Transmission">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SignalTransmission"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Solar_Flare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Solar_Flare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Solar_Nebula -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Solar_Nebula">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#FormationEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Solar_Storm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Solar_Storm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Sphere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Sphere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Shape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Stellar_Wind -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Stellar_Wind">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Stony -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Stony">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#AsteroidCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Storm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Storm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Subtropical_Climate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Subtropical_Climate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ClimateRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Sulphate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Sulphate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SurfaceMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Sulphur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Sulphur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CoreMaterial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Sun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Sun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ClassGStar"/>
+        <cbo:emits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Charged_Particle"/>
+        <cbo:emits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Energised_Particle"/>
+        <cbo:produces rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Helium"/>
+        <cbo:produces rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Hydrogen"/>
+        <cbo:hasHabitableZone rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.95</cbo:hasHabitableZone>
+        <cbo:hasStellarTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5778</cbo:hasStellarTemperature>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Sun"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasHabitableZone"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.95</owl:annotatedTarget>
+        <rdfs:comment>in astronomical units (AU)</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Terraformable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Terraformable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#PlanetCharacteristic"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SatelliteCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Tethys -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Tethys">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Saturn"/>
+        <cbo:hasRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">531</cbo:hasRadius>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Tethys"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasRadius"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">531</owl:annotatedTarget>
+        <rdfs:comment>in km</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Titan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Titan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Saturn"/>
+        <cbo:hasRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2574.7</cbo:hasRadius>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Titania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Titania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Uranus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Ton_618 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Ton_618">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SupermassiveBlackHole"/>
+        <cbo:feedsOff rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Zeta_Orionis_Aa"/>
+        <cbo:hasSolarMass rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.5999999E10</cbo:hasSolarMass>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Tornado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Tornado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Triaxial_Ellipsoid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Triaxial_Ellipsoid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Shape"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Triton -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Triton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Neptune"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Tropical_Climate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Tropical_Climate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ClimateRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Tsunami -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Tsunami">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Two-Wire_Transmission -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Two-Wire_Transmission">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#SignalTransmission"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Umbriel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Umbriel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalSatellite"/>
+        <cbo:hasSatelliteCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Natural"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Uranus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Uranus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Uranus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#GaseousPlanet"/>
+        <cbo:hasPlanetCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Gaseous"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Sun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#VLF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#VLF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#RadiationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Venus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Venus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#TerrestrialPlanet"/>
+        <cbo:hasPlanetCharacteristic rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Rocky"/>
+        <cbo:orbits rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Sun"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Visible_Light -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Visible_Light">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#RadiationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Visited -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Visited">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#CelestialBodyCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Volcanic_Eruption -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Volcanic_Eruption">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NaturalEvent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#X-Ray -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#X-Ray">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#RadiationType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Yellow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Yellow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Colour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Zeta_Orionis_Aa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Zeta_Orionis_Aa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#ClassOStar"/>
+        <cbo:hasStellarTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#int">29000</cbo:hasStellarTemperature>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Biela&apos;s_Comet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Biela&apos;s_Comet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#LostComet"/>
+        <cbo:hasPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#int">350</cbo:hasPeriod>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Biela&apos;s_Comet"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasPeriod"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#int">350</owl:annotatedTarget>
+        <rdfs:comment>years</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#C/1980_E1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#C/1980_E1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#NonPeriodicComet"/>
+        <cbo:hasPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1200</cbo:hasPeriod>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#C/1980_E1"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasPeriod"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1200</owl:annotatedTarget>
+        <rdfs:comment>years</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/CelestialBodyOntology#Halley&apos;s_Comet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Halley&apos;s_Comet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#PeriodicComet"/>
+        <cbo:hasPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</cbo:hasPeriod>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#Halley&apos;s_Comet"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/CelestialBodyOntology#hasPeriod"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</owl:annotatedTarget>
+        <rdfs:comment>years</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Asteroid"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#BlackHole"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Comet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Planet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Satellite"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/CelestialBodyOntology#Star"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
